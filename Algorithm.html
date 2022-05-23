@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>      h1,h2{
+        color: blueviolet;
+    }
+    *{
+        color: lightgray;
+        font-family: cursive;
+        background-color: black;
+    }
+    strong,b,th{
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    <a href="ShadowCoders.html">Home Page</a>
+    <h2>Recurrence relation</h2>
+<div>recursive tree <br>tracing tree</div>
+<ol>
+    <li>Back Substitution or Induction Metdod</li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ol>
+
+<h1>Algorithm</h1>
+<p>It is a stepwise step process to solve a computational problem</p>
+<p>Program is also a step by step process to solve a problem</p>
+
+<h2>Difference between Algorithm and Program</h2>
+<table>
+    <tbody>
+        <tr>
+            <th> <strong>Algorithm</strong> </th>
+            <th> <strong>Program</strong> </th>
+        </tr>
+        <tr>
+            <td>Algorithm are written at design time</td>
+            <td>Programmes are written at implementation time</td>
+        </tr>
+        <tr>
+            <td>Person who write the algorithm should be unambigious mean have a clear meaning. should  have domain knowledge</td>
+            <td>Programmer writes the program</td>
+        </tr>
+        <tr>
+            <td>Algorithm can be written in any language like english or matdmatical notation as long as it is understandable by those who are going to use it.</td>
+            <td>Programs are only written using programming languages. For example:- C,C++,Java etc.</td>
+        </tr>
+        <tr>
+            <td>Algorithm are independent of hardware and software (like operating system).</td>
+            <td>Programs are depend on hardware and software. You may be writing a program for a linux operating system or windows.</td>
+        </tr>
+        <tr>
+            <td>We analyze the algorithms</td>
+            <td>We do testing in the case of programs</td>
+        </tr>
+    </tbody>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <th>Priori Analysis</th>
+            <th>Posteriori Testing</th>
+        </tr>
+        <tr>
+            <td>It is done over algorithm. It means doing analysis of algorithm in greater detail to know how it is working and get some result that is finding time and space consume by the algorithm.</td>
+            <td>It is done over program. It means to test the program to know how much time and memory it is taking.</td>
+        </tr>
+        <tr>
+            <td>Language independent</td>
+            <td>Language dependent</td>
+        </tr>
+        <tr>
+            <td>Hardware independent</td>
+            <td>Hardware dependent</td>
+        </tr>
+        <tr>
+            <td>By priori analysis of algorithm we get time and space function.</td>
+            <td>By posteriori testing we get watch time and bytes taken by the program. </tr>
+        </tr>
+    </tbody>
+</table>
+<p></p>
+
+<ol><strong> Characterstics of algorithm </strong>
+    <li>It can take 0 or more input.</li>
+    <li>It must generate atleast one output.</li>
+    <li><b>Definiteness <br></b> Every statement in the algorithm should be unambigious mean have a clear meaning.</li>
+    <li><b>Finiteness <br></b>Algorithm must terminate. Duration of algorithm must be finite.</li>
+    <li><b>Effectiveness <br></b>Every statement in the algorithm should serve some purpose.</li>
+</ol>
+
+<h2>Format of writing an algorithm</h2>
+<div>
+    There is no fix syntax for writing an algorithm. Whatever syntax you use for writing an algorithm should be easily understood by
+    others.
+    However the general syntax that people generally use is as Follows:-
+    &#8592; is used as assignment operator
+    We use indentation (space) to indicate a block of code (similar to python)
+    <p>Example to demonstrate the format of writing an algorithm :
+        Swap(x,y)
+        Begin
+             x &#8592; x+y ;
+             y &#8592; x-y ;
+             x &#8592; x-y ;
+        End         
+    </p>
+
+<h2>How to analyse an algorithm</h2>    
+<ol>The two main criteria for analysis are
+    <li><b>Time<br></b>We analyse how much time our algorithm is going to take .We try to make our algorithm time efficient as much possible. </li>
+    <li><b>Space<br></b>We analyse how much space our algorithm is going to occupy in memory</li>
+    <br> You can also analyse an algorithm based on other criterias as per your requirment. 
+    Some other criterias are also given below.
+    <li><b>Network Consumption<br></b>How much data transfer is done </li>
+    <li><b>Power Consumption<br></b>How much power is consuming</li>
+    <li><b>CPU Registers<br></b>How many register are being used.</li>
+</ol>
+
+<p> <strong> Time and space analysis illustration:- <br></strong>
+    We assume each single statement (not a nested statement) in an algorithm take one unit of time irrespective of the complexity of the statement.
+    Example:
+    x &#8592 y;
+    X &#8592 5*x -y +x*y +x%2 
+    Now here in first statement there is only one assignment operator while in second statement there are six operators.
+    So clearly first statement is taking less time as compared to second statement but for simplicity we consider both statement
+    are taking same time.
+    We can also consider different units of time for statements of different complexities according to our need.
+     <br>
+    Swap(x,y) <br>
+    Begin <br>
+         x &#8592; x+y ; <br>
+         y &#8592; x-y ; <br>
+         x &#8592; x-y ; <br>
+    End <br>  
+
+    Here are three statement in this algorithm therefore it will take 3 units of time. <br>
+    So time funtion T(n) = 3 <br>
+
+    We assume each variable take 1 word space .We say word not byte because we don't know the data type of the variable.
+    Here in the algorithm there are two variable so the space complexity is 2 words. <br>
+    S(n) = 2 words <br>
+
+</p>
+</div>
+
+<h2>Frequency Count Method</h2>
+<div>
+    <p>Multiplication(A,n) <br>
+    </p>
+</div>
+<h2>Master Theorem for decreasing function</h2>
+<p>T(n) = a*T(n-b) + f(n) <br>
+    where a>0 ,b>0 and f(n)= n<sup>k</sup>  <br>
+   case 1: If a &#60; 0 <br>
+           Time complexity is O(f(n)) <br>
+   case 2: If a = 0 <br>
+           T(n) = O(n*f(n)) <br>
+   case 3: If a > 0 <br>
+           T(n) = O(a<sup>(n/b)</sup> * f(n)) <br>        
+           
+<h2>Master Theorem for dividing function</h2>
+<p>T(n) = a*T(n/b) + f(n) <br>
+    where a>=1 ,b>1 and f(n)= O(n<sup>k</sup>log<sup>p</sup>n) <br>
+   case 1: If log<sub>b</sub>a &#60; k <br>
+           A: If p>=0
+           Time complexity is O(n<sup>k</sup>log<sup>p</sup>n) <br>
+           B: If p &#60; 0
+           Time complexity is O(n<sup>k</sup>) <br>
+   case 2: If log<sub>b</sub>a <br>
+           T(n) = O(n*f(n)) <br>
+   case 3: If log<sub>b</sub>a >k <br>
+           T(n) = O(n<sup>log<sub>b</sub>a</sup>)             
+</p>
+
+<h2>Heap Sort</h2>
+<p> 
+    <div>
+    <ol><b>Basics of Binary Tree</b><br>
+        If a node is at index i then
+        <li>Left child is 2i</li>
+        <li>Right child is 2i+1</li>
+        <li>Its parent child is located at floor value of i/2</li>
+    </ol>
+    <ol>Types of binary tree
+        <li><b>Full binary tree</b></li>
+        <li><b>Complete binary tree</b></li>
+        <li></li>
+    </ol>
+    </div>
+    <div>
+        <h3>Heap</h3>
+        <p>It is a complete binary tree</p>
+        <ol>There are two types of heap
+            <li><b>Max Heap - </b>Every node is greater than or equal to its children nodes in max heap </li>
+            <li><b>Min Heap - </b>Every node is less than or equal to its children nodes in min heap</li>
+        </ol>
+    </div>
+    <h2>Merge Sort</h2>
+    <p><b>Merging</b><br> Merging is the process of combining two sorted list into a sorted list</p>
+    <table>
+        <thead>Illustration for two way merging</thead>
+        <tbody>
+            <p>A and B are sorted arrays . C is the array formed by merging of A and B </p>
+            <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>5</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>6</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>2-way Merge Sort</h3>
+    <h3>Merge Sort</h3>
+    <p>It is a recursive procedure or divide and conquer processor</p>
+
+    <h2>Quick Sort</h2>
+    <p>It follows divide and conquer strategy. </p>
+    <pre>
+        A[]= {13,12,43,2,23,34,4, }
+              |                  |
+         pivot and l                  h 
+        l= low that is beginnig of list ,h= high that is end of list , pivot = any element which is sorted that means every 
+        element on left should be smaller than pivot element and every element on right side of should pivot should be larger than
+        it.
+    </pre>
+
+    <h2>Greedy Method</h2>
+    <p> <b>Some terms to know before understanding greedy algorithm.</b>
+        This method is used to solve optimisation problems. <br>
+    <b>Optimisation Problem :</b> A problem which requires or demand either minimum result or maximum result. <br>
+       Example: Suppose a person wants to travel from location x to location y. <br>
+       Now to this problem there can be n number of solutions . <br>
+       Let's say he can cover the journey by walking solution 1. Person can complete the journey through car solution 2.
+       He can cover the whole journey through flight solution 3 and so on. He can cover the journey by helicopter solution 4  <br>
+       Now if I put a constraint that the journey must be complete within 3 hours then lets say there are two solutions to the problem
+       that are either complete the journey through flight or through the helicopter who satisfy the given constraint. Then such solution are termed as feasible solution.
+       <b>Feasible Solution :</b>Solutions which satisfy the constraints given in the problem are termed as feasible solution. <br>
+       <b>Case 2:</b> Now lets say if the person wants to cover the journey in minimum cost then this becomes a minimised problem. <br>
+       <b>Minimisation Problem: </b>If a problem wants that the solution should be minimimum then it referred as minimization problem. <br>
+       Then lets say the only solution to this problem is covering the whole jouney via flight. Then such solution which is feasible
+       and as well as giving minimum cost that is best result is referred as optimal solution .
+       <pre>
+           Person: X -> Y in 12 hrs and minimum cost
+               /  / \  \
+             s1  s2 [s3  s4] - s3 and s4 are feasible soltion 
+                     |
+                    Optimal Solution: Satisfy constraint and cost minimum that is give best result       </pre>
+        
+        <b>Greedy algorithm</b> <br>
+        <p>It says that a problem should be solved in stages. In each stage we will consider one input from given problem
+           and if that solution is feasible we will include in solution and by including all the feasible inputs we will get
+           the optimal solution.
+        </p>
+        <pre>General Algorithm
+             Algorithm Greedy(a,n)
+             Begin 
+                  for i &#8592 1 to n 
+                     x &#8592 Select(a);
+                     if feasible(x) then
+                     {
+                         solution &#8592 solution+x;
+                     }
+             End
+        </pre>
+    
+    </p>
+    <ol>Strategies to solve optimisation problems 
+        <li>Greedy Method</li>
+        <li>Dynamic Programming</li>
+        <li>Branch and Bound</li>
+    </ol>
+
+    <h2>Optimal Merge Pattern </h2>
+    <p>To obtain least merging time we should always merge small size list first.</p>
+    <pre><b>Illustration</b>
+    </pre>
+
+    <h2>Huffman Coding</h2>
+    <p>It is a compression techinique used to reduce the size of data or message.
+       <ol><b>Benefits of huffman coding</b> 
+           <li><strong>Reduce Size</strong> If we want to store some data in file then we can compress our data to reduce the size of file.</li>
+           <li><strong>Reduce cost</strong> Data can be send over network in compress form to reduce the cost of transmission.</li>
+       </ol>
+       <ol>In this article we are going to learn 
+           <li>What is cost of sending a normal message</li>
+           <li>What is fixed size in coding</li>
+           <li>What is variable size in coding that is huffman coding.</li>
+       </ol>
+       <h3>What is cost of sending a normal message</h3>
+       <pre>
+           The cost will be measured in terms of bits.
+           <b>Illustration</b>
+           Lets say message is AAAAABBBBBCCCCCDDDD
+           Length of message is 20.
+           Now electronic machine uses ASCII code to send alphabates.
+           ASCII code are 8 bits.
+           A 65 01000001
+           B 66 01000010
+           C 67 01000011
+           D 68 01000100
+           Now total size of message is 20* 8 = 160 bits.
+
+       </pre>
+
+    </p>
+
+
+
+</p>
+</body>
+</html>
+
+
+
+
